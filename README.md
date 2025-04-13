@@ -8,7 +8,7 @@
 2. Hacé doble clic en el archivo `index.html`.
 3. Se abrirá automáticamente en tu navegador por defecto.
 
-> ⚠️ Esto funciona perfecto para proyectos simples. Cuando empecemos a usar rutas más complejas o JavaScript que necesita un servidor, puede haber limitaciones.
+> ⚠️ Esto funciona perfecto para proyectos simples. Cuando empecemos a usar rutas más complejas con JavaScript que necesita un servidor, puede haber limitaciones.
 
 ![alt text](img/image.png)
 
