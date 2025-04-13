@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -19,17 +19,20 @@
       <div class="form-group">
         <label for="contrasena">Contraseña:</label>
         <input type="password" id="contrasena" name="contrasena" required minlength="6">
+        <div class="recovery-link">
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
       </div>
 
       <div id="error-msg" class="error"></div>
 
       <button type="submit">Ingresar</button>
-
-      <div class="links">
-        <a href="#">¿Olvidaste tu contraseña?</a>
-        <a href="#">Crear nueva cuenta</a>
-      </div>
     </form>
+
+    <div class="register">
+      <p>¿No tienes una cuenta?</p>
+      <button class="register-btn">Registrarse</button>
+    </div>
   </div>
 
   <script src="js/script.js"></script>
