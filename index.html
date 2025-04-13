@@ -3,22 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <h1>Login</h1>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form id="loginForm">
+      
+      <div class="form-group">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+      </div>
 
-  <form>
-    <label>Usuario:</label>
-    <input type="text" name="usuario">
-    <br>
+      <div class="form-group">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required minlength="6">
+      </div>
 
-    <label>Contraseña:</label>
-    <input type="password" name="contrasena">
-    <br>
+      <div id="error-msg" class="error"></div>
 
-    <button type="submit">Ingresar</button>
-  </form>
+      <button type="submit">Ingresar</button>
 
+      <div class="links">
+        <a href="#">¿Olvidaste tu contraseña?</a>
+        <a href="#">Crear nueva cuenta</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
