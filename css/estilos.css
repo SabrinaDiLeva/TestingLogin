@@ -1,11 +1,124 @@
+/* Fuente moderna y colores suaves */
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
   }
   
+  /* Contenedor principal */
   .login-container {
-    width: 300px;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 360px;
+  }
+  
+  /* Título */
+  .login-container h1 {
+    text-align: center;
+    margin-bottom: 1.8rem;
+    font-size: 1.8rem;
+    color: #111827;
+  }
+  
+  /* Campo de formulario */
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    color: #374151;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border 0.2s;
+    box-sizing: border-box;
+  }
+  
+  input:focus {
+    border-color: #6366f1;
+    outline: none;
+  }
+  
+  /* Link de recuperación */
+  .recovery-link {
+    text-align: right;
+    margin-top: 0.4rem;
+  }
+  
+  .recovery-link a {
+    font-size: 0.9rem;
+    color: #4f46e5;
+    text-decoration: none;
+  }
+  
+  .recovery-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Botón de ingreso */
+  button[type="submit"] {
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #4338ca;
+  }
+  
+  /* Mensaje de error */
+  .error {
+    color: #dc2626;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Sección de registro */
+  .register {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .register p {
+    margin-bottom: 0.6rem;
+    color: #374151;
+  }
+  
+  .register-btn {
+    padding: 0.6rem 1.2rem;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .register-btn:hover {
+    background-color: #059669;
   }
   
