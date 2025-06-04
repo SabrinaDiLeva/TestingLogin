@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Login</title>
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
   <div class="login-container">
     <h1>Login</h1>
     <form id="loginForm">
-      
       <div class="form-group">
         <label for="usuario">Usuario:</label>
-        <input type="text" id="usuario" name="usuario" required>
+        <input type="text" id="usuario" name="usuario" required />
       </div>
 
       <div class="form-group">
         <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" required minlength="6">
-        <div class="recovery-link">
-          <a href="#">¿Olvidaste tu contraseña?</a>
+        <div class="input-wrapper">
+          <input type="password" id="contrasena" name="contrasena" required />
+          <span class="toggle-password" onclick="togglePassword('contrasena')">
+            <i class="fa-solid fa-eye" id="eyeIconLogin"></i>
+          </span>
         </div>
       </div>
 
-      <div id="error-msg" class="error"></div>
+      <div id="loginError" class="error-message" style="display: none;"></div>
 
-      <button type="submit">Ingresar</button>
+      <button type="submit" class="btn-login">Ingresar</button>
+
+      <div class="form-links-inline">
+        <a href="forgot.html">¿Olvidaste tu contraseña?</a>
+        <span>|</span>
+        <a href="register.html">Registrarse</a>
+      </div>
     </form>
-
-    <div class="register">
-      <p>¿No tienes una cuenta?</p>
-      <button class="register-btn">Registrarse</button>
-    </div>
   </div>
 
   <script src="js/script.js"></script>

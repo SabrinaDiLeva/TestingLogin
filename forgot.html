@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recuperar Contraseña</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h1>Recuperar Contraseña</h1>
+    <form id="forgotForm">
+      <div class="form-group">
+        <label for="forgotEmail">Correo electrónico:</label>
+        <input type="text" id="forgotEmail" name="forgotEmail" />
+      </div>
+
+      <div id="forgotError" class="error-message" style="display: none;"></div>
+      <div id="forgotSuccess" class="success-message" style="display: none;"></div>
+
+      <button type="submit" class="btn-login">Recuperar</button>
+
+      <div class="form-links-inline">
+        <a href="index.html">Volver al login</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

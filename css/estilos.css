@@ -1,124 +1,153 @@
-/* Fuente moderna y colores suaves */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f3f4f6;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Contenedor principal */
-  .login-container {
-    background-color: #ffffff;
-    padding: 2.5rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 360px;
-  }
-  
-  /* Título */
-  .login-container h1 {
-    text-align: center;
-    margin-bottom: 1.8rem;
-    font-size: 1.8rem;
-    color: #111827;
-  }
-  
-  /* Campo de formulario */
-  .form-group {
-    margin-bottom: 1.2rem;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 0.4rem;
-    font-weight: 500;
-    color: #374151;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 0.6rem 0.75rem;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border 0.2s;
-    box-sizing: border-box;
-  }
-  
-  input:focus {
-    border-color: #6366f1;
-    outline: none;
-  }
-  
-  /* Link de recuperación */
-  .recovery-link {
-    text-align: right;
-    margin-top: 0.4rem;
-  }
-  
-  .recovery-link a {
-    font-size: 0.9rem;
-    color: #4f46e5;
-    text-decoration: none;
-  }
-  
-  .recovery-link a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Botón de ingreso */
-  button[type="submit"] {
-    width: 100%;
-    padding: 0.7rem;
-    margin-top: 0.5rem;
-    background-color: #4f46e5;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #4338ca;
-  }
-  
-  /* Mensaje de error */
-  .error {
-    color: #dc2626;
-    font-size: 0.85rem;
-    margin-top: 0.5rem;
-  }
-  
-  /* Sección de registro */
-  .register {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  .register p {
-    margin-bottom: 0.6rem;
-    color: #374151;
-  }
-  
-  .register-btn {
-    padding: 0.6rem 1.2rem;
-    background-color: #10b981;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  .register-btn:hover {
-    background-color: #059669;
-  }
-  
+  background-color: #f5f6fa;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e1e2f;
+  font-size: 28px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 18px;
+}
+
+.btn-login {
+  width: 100%;
+  background-color: #5e54e8;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+
+.btn-login:hover {
+  background-color: #4b42d8;
+}
+
+.form-links-inline {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.form-links-inline a {
+  color: #6c5ce7;
+  text-decoration: none;
+}
+
+.form-links-inline a:hover {
+  text-decoration: underline;
+}
+
+.form-links-inline span {
+  color: #aaa;
+}
+
+.welcome-text {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #444;
+  text-align: center;
+}
+
+.btn-secondary {
+  display: block;
+  width: 100%;
+  background-color: #8884ff;
+  color: white;
+  border: none;
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  margin-top: 20px;
+}
+
+.btn-secondary:hover {
+  background-color: #6e65e2;
+}
+
+.error-message {
+  color: #e74c3c;
+  background-color: #fdecea;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+.success-message {
+  color: #2e7d32;
+  background-color: #e9f6ec;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
