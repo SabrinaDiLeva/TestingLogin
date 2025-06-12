@@ -4,31 +4,32 @@
   <meta charset="UTF-8" />
   <title>Login</title>
   <link rel="stylesheet" href="css/estilos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 </head>
 <body>
   <div class="login-container">
     <h1>Login</h1>
-    <form id="loginForm">
+    <div id="message"></div>
+    <form id="loginForm" novalidate>
       <div class="form-group">
         <label for="usuario">Usuario:</label>
-        <input type="text" id="usuario" name="usuario" required />
+        <input type="text" id="usuario" name="usuario" />
       </div>
-
       <div class="form-group">
-        <label for="contrasena">Contraseña:</label>
-        <div class="input-wrapper">
-          <input type="password" id="contrasena" name="contrasena" required />
-          <span class="toggle-password" onclick="togglePassword('contrasena')">
-            <i class="fa-solid fa-eye" id="eyeIconLogin"></i>
-          </span>
+        <label for="password">Contraseña:</label>
+        <div class="password-field">
+          <input type="password" id="password" name="password" />
+          <i
+            id="togglePassword"
+            class="fa fa-eye toggle-password"
+            onclick="togglePassword('password','togglePassword')"
+          ></i>
         </div>
       </div>
-
-      <div id="loginError" class="error-message" style="display: none;"></div>
-
       <button type="submit" class="btn-login">Ingresar</button>
-
       <div class="form-links-inline">
         <a href="forgot.html">¿Olvidaste tu contraseña?</a>
         <span>|</span>
@@ -36,7 +37,6 @@
       </div>
     </form>
   </div>
-
   <script src="js/script.js"></script>
 </body>
 </html>

@@ -8,8 +8,24 @@
 <body>
   <div class="login-container">
     <h1>Bienvenido al sistema</h1>
-    <p class="welcome-text">Has iniciado sesión correctamente.</p>
-    <a href="index.html" class="btn-secondary">Cerrar sesión</a>
+    <p class="welcome-text">Hola, <span id="userName"></span></p>
+    <a href="#" id="logoutBtn" class="btn-secondary">Cerrar sesión</a>
   </div>
+
+  <script>
+    // Validar sesión
+    const user = sessionStorage.getItem('currentUser');
+    if (!user) {
+      window.location.href = 'index.html';
+    } else {
+      document.getElementById('userName').textContent = user;
+    }
+    // Logout
+    document.getElementById('logoutBtn').addEventListener('click', e => {
+      e.preventDefault();
+      sessionStorage.removeItem('currentUser');
+      window.location.href = 'index.html';
+    });
+  </script>
 </body>
 </html>

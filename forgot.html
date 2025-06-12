@@ -8,23 +8,22 @@
 <body>
   <div class="login-container">
     <h1>Recuperar Contraseña</h1>
-    <form id="forgotForm">
+    <div id="message"></div>
+    <form id="forgotForm" novalidate>
       <div class="form-group">
-        <label for="forgotEmail">Correo electrónico:</label>
-        <input type="text" id="forgotEmail" name="forgotEmail" />
+        <label for="forgotUsuario">Usuario:</label>
+        <input type="text" id="forgotUsuario" name="forgotUsuario" />
       </div>
-
-      <div id="forgotError" class="error-message" style="display: none;"></div>
-      <div id="forgotSuccess" class="success-message" style="display: none;"></div>
-
+      <div class="form-group">
+        <label for="forgotEmail">Email:</label>
+        <input type="email" id="forgotEmail" name="forgotEmail" />
+      </div>
       <button type="submit" class="btn-login">Recuperar</button>
-
       <div class="form-links-inline">
         <a href="index.html">Volver al login</a>
       </div>
     </form>
   </div>
-
   <script src="js/script.js"></script>
 </body>
 </html>

@@ -4,42 +4,56 @@
   <meta charset="UTF-8" />
   <title>Registrarse</title>
   <link rel="stylesheet" href="css/estilos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 </head>
 <body>
   <div class="login-container">
     <h1>Registrarse</h1>
-    <form id="registerForm">
+    <div id="message"></div>
+    <form id="registerForm" novalidate>
       <div class="form-group">
         <label for="regUsuario">Usuario:</label>
-        <input type="text" id="regUsuario" name="regUsuario" required />
+        <input type="text" id="regUsuario" name="regUsuario" />
       </div>
-
       <div class="form-group">
-        <label for="regCorreo">Correo electrónico:</label>
-        <input type="email" id="regCorreo" name="regCorreo" required />
+        <label for="regEmail">Email:</label>
+        <input type="email" id="regEmail" name="regEmail" />
       </div>
-
       <div class="form-group">
-        <label for="regContrasena">Contraseña:</label>
-        <div class="input-wrapper">
-          <input type="password" id="regContrasena" name="regContrasena" required />
-          <span class="toggle-password" onclick="togglePassword('regContrasena')">
-            <i class="fa-solid fa-eye" id="eyeIconReg"></i>
-          </span>
+        <label for="regPassword">Contraseña:</label>
+        <div class="password-field">
+          <input type="password" id="regPassword" name="regPassword" />
+          <i
+            id="toggleRegPassword"
+            class="fa fa-eye toggle-password"
+            onclick="togglePassword('regPassword','toggleRegPassword')"
+          ></i>
         </div>
       </div>
-
-      <div id="registerError" class="error-message" style="display: none;"></div>
-
+      <div class="form-group">
+        <label for="regConfirmPassword">Confirmar Contraseña:</label>
+        <div class="password-field">
+          <input
+            type="password"
+            id="regConfirmPassword"
+            name="regConfirmPassword"
+          />
+          <i
+            id="toggleRegConfirmPassword"
+            class="fa fa-eye toggle-password"
+            onclick="togglePassword('regConfirmPassword','toggleRegConfirmPassword')"
+          ></i>
+        </div>
+      </div>
       <button type="submit" class="btn-login">Registrar</button>
-
       <div class="form-links-inline">
         <a href="index.html">Volver al login</a>
       </div>
     </form>
   </div>
-
   <script src="js/script.js"></script>
 </body>
 </html>
