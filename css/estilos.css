@@ -1,3 +1,4 @@
+/* === Reset y básicos === */
 * {
   margin: 0;
   padding: 0;
@@ -7,107 +8,122 @@
 
 body {
   background-color: #f5f6fa;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 16px;
 }
 
+/* === Tarjeta principal === */
 .login-container {
-  background: white;
+  background: #fff;
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
+  transition: padding 0.2s, border-radius 0.2s, box-shadow 0.2s;
+  margin: auto;
 }
 
+/* === Títulos === */
 .login-container h1 {
   text-align: center;
-  margin-bottom: 25px;
   color: #1e1e2f;
   font-size: 28px;
+  margin-bottom: 24px;
 }
 
+/* === Campos de formulario === */
 .form-group {
   margin-bottom: 20px;
 }
-
 .form-group label {
   display: block;
   margin-bottom: 6px;
   color: #333;
   font-weight: 500;
 }
-
 .form-group input {
   width: 100%;
   padding: 10px 12px;
-  border-radius: 8px;
   border: 1px solid #ccc;
+  border-radius: 8px;
   font-size: 15px;
+  transition: border-color 0.2s;
+}
+.form-group input:focus {
+  outline: none;
+  border-color: #6c5ce7;
 }
 
-/* Contenedor de campo con ojito */
+/* === Toggle contraseña === */
 .password-field {
   position: relative;
 }
-
 .password-field input {
-  width: 100%;
   padding-right: 2.5em;
 }
-
 .password-field .toggle-password {
   position: absolute;
   top: 50%;
   right: 0.75em;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #888;
   font-size: 1.2em;
-  z-index: 1;
+  color: #888;
 }
 
-.btn-login {
+/* === Botones === */
+.btn-login,
+.btn-secondary {
+  display: block;
   width: 100%;
-  background-color: #5e54e8;
-  color: white;
-  border: none;
   padding: 12px;
   font-size: 16px;
+  font-weight: 500;
+  border: none;
   border-radius: 8px;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
   transition: background-color 0.2s;
+}
+.btn-login {
+  background-color: #5e54e8;
+  color: #fff;
   margin-top: 10px;
 }
-
 .btn-login:hover {
   background-color: #4b42d8;
 }
+.btn-secondary {
+  background-color: #8884ff;
+  color: #fff;
+  margin-top: 20px;
+}
+.btn-secondary:hover {
+  background-color: #6e65e2;
+}
 
+/* === Enlaces adicionales === */
 .form-links-inline {
-  margin-top: 18px;
+  margin-top: 16px;
   display: flex;
   justify-content: center;
   gap: 8px;
   font-size: 14px;
 }
-
 .form-links-inline a {
   color: #6c5ce7;
   text-decoration: none;
 }
-
 .form-links-inline a:hover {
   text-decoration: underline;
 }
 
-.form-links-inline span {
-  color: #aaa;
-}
-
-/* Mensajes unificados */
+/* === Mensajes de error/éxito === */
 .message {
   padding: 10px;
   margin-bottom: 15px;
@@ -124,4 +140,97 @@ body {
   color: #155724;
   background-color: #d4edda;
   border: 1px solid #c3e6cb;
+}
+
+/* === Dashboard styles === */
+.login-container.dashboard {
+  max-width: 480px;
+  padding: 60px 40px;
+  text-align: center;
+}
+.login-container.dashboard h1 {
+  margin-bottom: 24px;
+}
+.login-container.dashboard .welcome-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 32px;
+}
+.login-container.dashboard .btn-secondary {
+  width: auto;
+  padding: 12px 32px;
+  margin: 0 auto;
+}
+
+/* === Responsive real === */
+@media (max-width: 600px) {
+  /* Adaptamos el body para permitir scroll nativo */
+  body {
+    display: block;
+    padding: 0;
+  }
+
+  /* Tarjeta ocupa todo el ancho sin sombra ni bordes excesivos */
+  .login-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 24px;
+    border-radius: 8px 8px 0 0;
+    box-shadow: none;
+    margin: 0 auto;
+  }
+
+  /* Titular más pequeño */
+  .login-container h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  /* Campos más compactos */
+  .form-group input,
+  .password-field input {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  /* Botones full-width con padding reducido */
+  .btn-login,
+  .btn-secondary {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Enlaces apilados y centrados */
+  .form-links-inline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  /* Oculta la barra “|” */
+  .form-links-inline span {
+    display: none;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .login-container {
+    max-width: 90%;
+    padding: 32px;
+  }
+  .login-container h1 {
+    font-size: 26px;
+  }
+  .form-group input,
+  .password-field input {
+    padding: 9px 11px;
+  }
+  .btn-login,
+  .btn-secondary {
+    padding: 11px;
+    font-size: 15px;
+  }
 }

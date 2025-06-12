@@ -2,24 +2,26 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dashboard</title>
   <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
-  <div class="login-container">
+  <div class="login-container dashboard">
     <h1>Bienvenido al sistema</h1>
     <p class="welcome-text">Hola, <span id="userName"></span></p>
-    <a href="#" id="logoutBtn" class="btn-secondary">Cerrar sesión</a>
+    <button id="logoutBtn" class="btn-secondary">Cerrar sesión</button>
   </div>
 
   <script>
-    // Validar sesión
+    // Validar sesión y mostrar usuario
     const user = sessionStorage.getItem('currentUser');
     if (!user) {
       window.location.href = 'index.html';
     } else {
       document.getElementById('userName').textContent = user;
     }
+
     // Logout
     document.getElementById('logoutBtn').addEventListener('click', e => {
       e.preventDefault();
